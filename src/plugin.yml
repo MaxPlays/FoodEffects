@@ -1,0 +1,15 @@
+name: FoodEffects
+author: MaxPlays
+version: 1.0
+main: me.MaxPlays.FoodEffects.main.FoodEffects
+website: https://github.com/MaxPlays
+commands:
+  foodeffects:
+    usage: /foodeffects
+    description: Main command
+    aliases: [fe]
+permissions:
+  foodeffects.*:
+    description: Everything
+    children:
+      foodeffects.admin: true
