@@ -5,7 +5,7 @@ main: me.MaxPlays.FoodEffects.main.FoodEffects
 website: https://github.com/MaxPlays
 commands:
   foodeffects:
-    usage: /foodeffects
+    usage: /foodeffects help
     description: Main command
     aliases: [fe]
 permissions:
