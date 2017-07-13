@@ -9,15 +9,15 @@ This plugin has one simple command: **/FoodEffects**. The sub-commands can be se
 of the command: **/fe**.
 
 ### Add potion effects to an item ###
-**/fe add <Effect> <Amplifier> <Duration>**
-<Effect> is the potion effect (/fe listEffects)
-<Amplifier> is the default minecraft amplifier
-<Duration> is the time the potion effect will last in seconds
-**You can also use the <TAB> button on your keyboard to easily select the desired sub-command/potion effect**
+**/fe add Effect Amplifier Duration**
+**Effect** is the potion effect (/fe listEffects)
+**Amplifier** is the default minecraft amplifier
+**Duration** is the time the potion effect will last in seconds
+**You can also use the TAB button on your keyboard to easily select the desired sub-command/potion effect**
 
 ### Remove potion effects from an item ###
-**/fe remove <Effect>**
-<Effect> is the potion effect (/fe listEffects)
+**/fe remove Effect**
+**Effect** is the potion effect (/fe listEffects)
 
 ### List active potion effects ###
 **/fe list**
