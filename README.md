@@ -2,7 +2,7 @@
 Bukkit plugin that gives potion effects to food
 
 ## Installation ##
-To install this plugin, download the latest release here and drop it into your plugins folder. Start the server normally. This was written for Spigot 1.11
+To install this plugin, download the latest release [here](https://github.com/MaxPlays/FoodEffects/releases/latest) and drop it into your plugins folder. Start the server normally. This was written for Spigot 1.11
 
 ## Commands ##
 This plugin has one simple command: **/FoodEffects**. The sub-commands can be seen using **/FoodEffects help**. There is also a short form
