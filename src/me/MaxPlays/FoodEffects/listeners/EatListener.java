@@ -43,7 +43,7 @@ public class EatListener implements Listener{
                                     public void run() {
                                         if(p.hasPotionEffect(type))
                                             p.removePotionEffect(type);
-                                        p.addPotionEffect(new PotionEffect(type, dur, amp));
+                                        p.addPotionEffect(new PotionEffect(type, dur, amp - 1));
                                     }
                                 }.runTask(FoodEffects.instance);
                             }while (rs.next());
