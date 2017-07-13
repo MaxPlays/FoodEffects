@@ -38,6 +38,7 @@ public class Lists {
         new BukkitRunnable() {
             @Override
             public void run() {
+                itemsWithEffects.clear();
                 ResultSet rs = FoodEffects.instance.sql.query("SELECT item FROM effects;");
                 try {
                     while(rs.next()){
@@ -49,7 +50,7 @@ public class Lists {
                     e.printStackTrace();
                 }
             }
-        }.runTaskAsynchronously(FoodEffects.instance);
+        }.runTaskTimerAsynchronously(FoodEffects.instance, 0, 20*60);
     }
 
     public static boolean isFood(ItemStack is){
@@ -63,5 +64,10 @@ public class Lists {
     }
     public static boolean hasEffect(ItemStack is){
         return itemsWithEffects.contains(is.getType());
+    }
+
+    public static void addItem(ItemStack is){
+        if(!itemsWithEffects.contains(is.getType()))
+            itemsWithEffects.add(is.getType());
     }
 }

@@ -161,6 +161,7 @@ public class CommandFoodEffects implements CommandExecutor{
                                     " Use §c/foodeffects remove <Effect> §7to remove the effect from the item.");
                         }else{
                             FoodEffects.instance.sql.update("INSERT INTO effects VALUES('" + s + "', '" + type.getName() + "', " + amplifier + ", " + duration + ");");
+                            Lists.addItem(is);
                             p.sendMessage(FoodEffects.prefix + "The effect §c" + type.getName() + " §7was added to the item.");
                         }
                     } catch (SQLException e) {

@@ -1,6 +1,7 @@
 package me.MaxPlays.FoodEffects.main;
 
 import me.MaxPlays.FoodEffects.commands.CommandFoodEffects;
+import me.MaxPlays.FoodEffects.commands.CommandFoodEffectsCompleter;
 import me.MaxPlays.FoodEffects.listeners.EatListener;
 import me.MaxPlays.FoodEffects.util.Lists;
 import me.MaxPlays.FoodEffects.util.SQL;
@@ -29,6 +30,7 @@ public class FoodEffects extends JavaPlugin{
 
         new Lists();
         getCommand("foodeffects").setExecutor(new CommandFoodEffects());
+        getCommand("foodeffects").setTabCompleter(new CommandFoodEffectsCompleter());
     }
 
     public void onDisable() {

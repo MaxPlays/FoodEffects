@@ -41,6 +41,8 @@ public class EatListener implements Listener{
                                 new BukkitRunnable() {
                                     @Override
                                     public void run() {
+                                        if(p.hasPotionEffect(type))
+                                            p.removePotionEffect(type);
                                         p.addPotionEffect(new PotionEffect(type, dur, amp));
                                     }
                                 }.runTask(FoodEffects.instance);
@@ -58,9 +60,16 @@ public class EatListener implements Listener{
     public void onInteract(PlayerInteractEvent e){
         Player p = e.getPlayer();
         if(e.getAction().equals(Action.RIGHT_CLICK_AIR) | e.getAction().equals(Action.RIGHT_CLICK_BLOCK)){
-            if(e.getItem() != null && Lists.hasEffect(e.getItem()) && p.getSaturation() >= 20f && p.getGameMode() != GameMode.CREATIVE
+            if(e.getItem() != null && Lists.hasEffect(e.getItem()) && p.getFoodLevel() >= 20f && p.getGameMode() != GameMode.CREATIVE
                     && p.getGameMode() != GameMode.SPECTATOR){
-                p.setSaturation(19.5f);
+                p.setFoodLevel(19);
+                new BukkitRunnable() {
+                    @Override
+                    public void run() {
+                        if(p.getFoodLevel() == 19)
+                            p.setFoodLevel(20);
+                    }
+                }.runTaskLater(FoodEffects.instance, 1);
             }
         }
     }
